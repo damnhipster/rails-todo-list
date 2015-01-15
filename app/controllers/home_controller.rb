@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
+
   def index
-    @items = ["Adopt a cat", "Buy a dog", "???", "Profit"]
+    @items = []
+    Todo.all.each {|todo| @items.push todo.item}
+    @items
   end
 end
