@@ -2,7 +2,7 @@
 
 <ul>
   <% @items.each do |item| %>
-    <li><%= item %></li>
+    <li><%= item %><a href="/home/remove?item=<%= item %>">delete</a></li>
   <% end %>
 </ul>
 

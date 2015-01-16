@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   post 'home/add'
+  get 'home/remove'
 
   get 'home/index'
 

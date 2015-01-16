@@ -10,4 +10,10 @@ class HomeController < ApplicationController
     Todo.create(item: params[:item])
     redirect_to '/'
   end
+
+  def remove
+    Todo.find_by(item: params[:item]).destroy
+    redirect_to '/'
+  end
+
 end
